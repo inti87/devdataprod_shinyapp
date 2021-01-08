@@ -378,15 +378,42 @@ summary {
 </div>
 <div id="apps-basic-idea" class="section level2">
 <h2>App’s basic idea</h2>
+<p>ShinyApp can be used as a helper to estimate (or predict) diamond price by providing diamond features. ShinyApp also shows actual diamonds’ prices plot (with selected diamonds’ features).</p>
 </div>
 <div id="data-used" class="section level2">
 <h2>Data Used</h2>
+<p>To build diamond price prediction model and to show actual diamond prices the ShinyApp uses diamonds data set from the <strong>ggplot2</strong> library. Only given diamond features are used in the model and shown on provided plot:</p>
+<ul>
+<li><strong>diamond weight</strong></li>
+<li><strong>diamond color</strong></li>
+<li><strong>diamond cut</strong></li>
+<li><strong>diamond price</strong> (also used as predicted variable)</li>
+</ul>
 </div>
 <div id="how-to-use-app" class="section level2">
 <h2>How to use app</h2>
+<p>On the sidebar panel (left side of the ShinyApp) user selects:</p>
+<ul>
+<li>Number of actual diamonds to be shown on the plot (diamonds are randomly selected) - slider button</li>
+<li><strong>User’s diamond’s weight</strong> in carat (diamond feature) - slider button</li>
+<li><strong>User’s diamond’s color</strong> (diamond feature) - radio button (all options given)</li>
+<li><strong>User’s diamond’s cut</strong> (diamond feature) - radio button (all options given)</li>
+<li><strong>Submit button</strong> - to run server calculations and build the output</li>
+</ul>
 </div>
 <div id="app-output" class="section level2">
 <h2>App output</h2>
+<p>When user hits the <strong>Submit button</strong>, shiny server will run ShinyApp calculations:</p>
+<ul>
+<li>simple linear prediction model is built using all diamonds from the diamonds data set</li>
+<li>model only includes features, that user can selects using main panel</li>
+</ul>
+<p>The results of calculations are given on main panel (right side of the ShinyApp):</p>
+<ul>
+<li>scatter plot is drawn showing diamond features and diamond prices</li>
+<li>actual diamonds prices are shown and diamond with selected features by user with predicted price by linear model</li>
+<li>also predicted diamond price is shown below (price is given in USD and the value is rounded to 100USD)</li>
+</ul>
 </div>
 </div>
 
