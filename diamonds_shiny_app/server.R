@@ -30,12 +30,7 @@ shinyServer(function(input, output) {
                                             cut = cutInput))
     })
     
-    # Predicted price (numeric value) - rounded on 100 USD
-    # output$pred <- renderText({
-    #     round(modelpred() / 100, 0) * 100
-    # })
-    
-    # Predicted price as string (added USD)
+        # Predicted price as string (added USD)
     output$pred_USD <- renderText({
         paste(round(modelpred() / 100, 0) * 100, "USD", sep = " ")
     })
