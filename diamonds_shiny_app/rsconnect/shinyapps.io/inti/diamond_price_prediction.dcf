@@ -1,0 +1,12 @@
+name: diamond_price_prediction
+title: diamond_price_prediction
+username:
+account: inti
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3453103
+bundleId: 4071454
+url: https://inti.shinyapps.io/diamond_price_prediction/
+when: 1610088833.28029
+asMultiple: FALSE
+asStatic: FALSE
